@@ -1,0 +1,386 @@
+
+/* FEATURED SERVICES */
+
+.featured-section {
+  width: 100%;
+  padding: 80px 0;
+  background: #fff;
+  font-family: var(--font-body), sans-serif;
+  overflow: hidden;
+}
+
+.featured-container {
+  width: 90%;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 100px;
+  align-items: start;
+}
+
+/* LEFT SIDE */
+
+.featured-left {
+  position: sticky;
+  top: 100px;
+}
+
+.featured-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #a98540;
+  margin-bottom: 25px;
+}
+
+.featured-eyebrow::before {
+  content: "";
+  width: 35px;
+  height: 1px;
+  background: #c5a059;
+}
+
+.featured-left h2 {
+  font-family: var(--font-heading), serif;
+  font-size: clamp(48px, 5vw, 68px);
+  line-height: 1.12;
+  font-weight: 500;
+  letter-spacing: -1.8px;
+  color: #2c3531;
+  margin: 0 0 28px;
+}
+
+.featured-left h2 span {
+  color:#015e5f;
+}
+
+.featured-intro {
+  max-width: 390px;
+  font-size: 16px;
+  line-height: 1.95;
+  color: #68736d;
+  margin: 0;
+}
+
+/* DECORATIVE NOTE */
+
+.featured-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+  margin-top: 45px;
+}
+
+.featured-note-line {
+  width: 2px;
+  height: 48px;
+  background: #c5a059;
+}
+
+.featured-note p {
+  font-family: var(--font-heading), serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: #53635b;
+  margin: 0;
+}
+
+/* CONTACT LINK */
+
+.featured-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 45px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #015e5f;
+  transition: color 0.3s ease;
+}
+
+.featured-contact-link span {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #8a9a86;
+  border-radius: 50%;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+.featured-contact-link:hover span {
+  background: #015e5f;
+  color: #ffffff;
+  border-color: #015e5f;
+  transform: translateX(4px);
+}
+
+/* RIGHT SIDE */
+
+.featured-right {
+  width: 100%;
+  border-top: 1px solid #e6e8e4;
+}
+
+/* SERVICE ROW */
+
+.featured-service {
+  display: grid;
+  grid-template-columns: 1fr 42px;
+  align-items: center;
+  gap: 25px;
+  padding: 34px 0;
+  border-bottom: 1px solid #e6e8e4;
+  text-decoration: none;
+  transition: padding 0.3s ease;
+}
+
+.featured-service:hover {
+  padding-left: 10px;
+}
+
+/* CATEGORY */
+
+.featured-service-category {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #8a9a86;
+  margin-bottom: 13px;
+}
+
+.featured-category-dot {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #c5a059;
+}
+
+/* DETAILS */
+
+.featured-service-details h3 {
+  font-family: var(--font-heading), serif;
+  font-size: 25px;
+  line-height: 1.35;
+  font-weight: 500;
+  color: #2c3531;
+  margin: 0 0 10px;
+  transition: color 0.3s ease;
+}
+
+.featured-service:hover h3 {
+  color: #015e5f;
+}
+
+.featured-service-subtitle {
+  display: inline-block;
+  color: #a98540;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 9px;
+}
+
+.featured-service-details p {
+  max-width: 570px;
+  font-size: 16px;
+  line-height: 1.85;
+  color: #68736d;
+  margin: 0;
+}
+
+/* CIRCULAR ARROW */
+
+.featured-service-arrow {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #dfe4dc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #53635b;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.featured-service:hover .featured-service-arrow {
+  background: #015e5f;
+  color: #ffffff;
+  border-color: #015e5f;
+  transform: rotate(-45deg);
+}
+
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+  .featured-section {
+    padding: 85px 0;
+  }
+
+  .featured-container {
+    gap: 55px;
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+
+  .featured-left h2 {
+    font-size: 50px;
+  }
+
+  .featured-service {
+    grid-template-columns: 1fr 38px;
+    gap: 15px;
+  }
+
+  .featured-service-details h3 {
+    font-size: 22px;
+  }
+
+  .featured-service-details p {
+    font-size: 15px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .featured-section {
+    padding: 70px 0;
+  }
+
+  .featured-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .featured-left {
+    position: static;
+  }
+
+  .featured-eyebrow {
+    font-size: 12px;
+  }
+
+  .featured-left h2 {
+    max-width: 550px;
+    font-size: clamp(40px, 7vw, 48px);
+    line-height: 1.15;
+  }
+
+  .featured-intro {
+    max-width: 550px;
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .featured-contact-link {
+    margin-top: 30px;
+    font-size: 15px;
+  }
+
+  .featured-service {
+    padding: 28px 0;
+  }
+
+  .featured-service-category {
+    font-size: 11px;
+    letter-spacing: 1.2px;
+  }
+
+  .featured-service-details h3 {
+    font-size: 23px;
+  }
+
+  .featured-service-details p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+  .featured-section {
+    padding: 55px 0;
+  }
+
+  .featured-container {
+    width: 88%;
+    gap: 35px;
+  }
+
+  .featured-eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+  }
+
+  .featured-left h2 {
+    font-size: 40px;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+  }
+
+  .featured-intro {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .featured-contact-link {
+    margin-top: 25px;
+    font-size: 14px;
+    gap: 13px;
+  }
+
+  .featured-contact-link span {
+    width: 32px;
+    height: 32px;
+    font-size: 11px;
+  }
+
+  .featured-service {
+    grid-template-columns: 1fr 32px;
+    gap: 10px;
+    padding: 25px 0;
+  }
+
+  .featured-service-category {
+    font-size: 10px;
+    letter-spacing: 0.9px;
+    gap: 7px;
+    margin-bottom: 11px;
+  }
+
+  .featured-category-dot {
+    width: 5px;
+    height: 5px;
+  }
+
+  .featured-service-details h3 {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 9px;
+  }
+
+  .featured-service-details p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .featured-service-arrow {
+    width: 31px;
+    height: 31px;
+    font-size: 10px;
+  }
+}

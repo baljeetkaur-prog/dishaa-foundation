@@ -1,0 +1,129 @@
+/* HIGHLIGHTS SECTION */
+
+.highlights-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 65px 0;
+  font-family: var(--font-body), sans-serif;
+}
+
+.highlights-container {
+  max-width: 1440px;
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  align-items: stretch;
+}
+/* INDIVIDUAL ITEM */
+
+.highlight-item {
+  display: flex;
+  align-items: stretch;
+  gap: 18px;
+  text-decoration: none;
+  padding: 10px 0;
+  transition: transform 0.3s ease;
+}
+/* ICON */
+
+.highlight-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #015e5f; 
+  font-size: 35px;
+}
+
+/* CONTENT */
+
+.highlight-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+.highlight-content h3 {
+  font-family: var(--font-heading), serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #263b38;
+  margin: 0 0 9px;
+  line-height: 1.4;
+  letter-spacing: -0.3px;
+}
+
+.highlight-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #53635e;
+  margin: 0 0 13px;
+}
+
+/* ARROW */
+
+.highlight-arrow {
+  font-size: 22px;
+  color: #263b38;
+  transition: transform 0.3s ease;
+  margin-top: auto;
+  padding-top: 10px;
+}
+@media (max-width: 1050px) {
+  .highlights-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 25px;
+  }
+
+  .highlight-content h3 {
+    font-size: 19px;
+  }
+
+  .highlight-content p {
+    font-size: 15px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .highlights-section {
+    padding: 40px 0;
+  }
+
+  .highlights-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .highlight-item {
+    gap: 16px;
+    padding: 5px 0;
+  }
+
+  .highlight-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 27px;
+  }
+
+  .highlight-content h3 {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+
+  .highlight-content p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+  }
+
+  .highlight-arrow {
+    font-size: 19px;
+  }
+}

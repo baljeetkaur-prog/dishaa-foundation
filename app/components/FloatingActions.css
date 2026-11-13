@@ -1,0 +1,186 @@
+
+/* FLOATING ACTIONS */
+
+.floating-actions {
+  position: fixed;
+  right: 25px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  z-index: 9999;
+}
+
+/* WHATSAPP BUTTON */
+
+.floating-whatsapp {
+  position: relative;
+  isolation: isolate;
+  width: 55px;
+  height: 55px;
+  background: #25d366;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 29px;
+  text-decoration: none;
+  z-index: 1;
+}
+
+/* TWO PULSING CIRCLES */
+
+.floating-whatsapp::before,
+.floating-whatsapp::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, 0.25);
+  z-index: -1;
+  animation: whatsapp-ring 2.4s ease-out infinite;
+}
+
+.floating-whatsapp::after {
+  animation-delay: 1.2s;
+  background: rgba(184, 226, 202, 0.65);
+}
+
+/* WHATSAPP ICON ANIMATION */
+
+.floating-whatsapp svg {
+  position: relative;
+  animation: whatsapp-shake 2.4s ease-in-out infinite;
+}
+
+@keyframes whatsapp-ring {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+@keyframes whatsapp-shake {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  10% {
+    transform: translateY(-3px) rotate(-8deg);
+  }
+
+  20% {
+    transform: translateY(-4px) rotate(8deg);
+  }
+
+  30% {
+    transform: translateY(-2px) rotate(-6deg);
+  }
+
+  40% {
+    transform: translateY(0) rotate(5deg);
+  }
+
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+/* SCROLL PROGRESS BUTTON */
+
+.scroll-progress-button {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #b8e2ca;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.scroll-progress-circle {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.scroll-progress-track {
+  fill: none;
+  stroke: rgba(1, 94, 95, 0.20);
+  stroke-width: 2.5;
+}
+
+.scroll-progress-fill {
+  fill: none;
+  stroke: #015e5f;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.15s ease;
+}
+
+.scroll-progress-text {
+  position: relative;
+  z-index: 1;
+  color: #015e5f;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .floating-actions {
+    right: 12px;
+    bottom: 18px;
+    gap: 10px;
+  }
+
+  .floating-whatsapp {
+    width: 44px;
+    height: 44px;
+    font-size: 23px;
+  }
+
+  .floating-whatsapp::before,
+  .floating-whatsapp::after {
+    inset: -4px;
+  }
+
+  .scroll-progress-button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .scroll-progress-text {
+    font-size: 10px;
+  }
+}
+
+/* REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-whatsapp::before,
+  .floating-whatsapp::after,
+  .floating-whatsapp svg {
+    animation: none;
+  }
+
+  .scroll-progress-fill {
+    transition: none;
+  }
+}
+
